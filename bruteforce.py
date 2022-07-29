@@ -1,3 +1,5 @@
+import http.client, urllib.parse
+
 username_file = open('/usr/share/nmap/nselib/data/usernames.lst')
 password_file = open('/usr/share/nmap/nselib/data/passwords.lst')
 
@@ -20,5 +22,5 @@ for user in user_list:
 
 
                 if(response.getheader('location') == "index.php"):
-                        print("Logged with",user,"",pwd)
+                        print("Logged with",user,"-",pwd)
                         exit()

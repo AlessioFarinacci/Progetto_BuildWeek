@@ -9,7 +9,7 @@ if(port == ""):
 try:
 
     connection = http.client.HTTPConnection(host, port)
-    connection.request('OPTIONS', 'http://192.168.50.101/phpMyAdmin/phpMyAdmin.html%27)
+    connection.request('OPTIONS', 'http://192.168.50.101/phpMyAdmin/phpMyAdmin.html')
     response=connection.getresponse()
     print("I metodi abilitati sono:")
     print(response.getheader('allow'))
